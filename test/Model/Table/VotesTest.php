@@ -12,12 +12,12 @@ class VotesTest extends TableTestCase
     /**
      * @var string
      */
-    protected $sqlPath = __DIR__ . '/../../..' . '/sql/leogalle_test/votes/';
+    protected $sqlPath = __DIR__ . '/../../..' . '/sql/test/votes/';
 
     protected function setUp(): void
     {
         $configArray     = require(__DIR__ . '/../../../config/autoload/local.php');
-        $configArray     = $configArray['db']['adapters']['leogalle_test'];
+        $configArray     = $configArray['db']['adapters']['test'];
         $this->adapter   = new Adapter($configArray);
 
         $this->votesTable      = new VoteTable\Votes($this->adapter);

@@ -11,12 +11,12 @@ class VoteByIpTest extends TableTestCase
     /**
      * @var string
      */
-    protected $sqlPath = __DIR__ . '/../../..' . '/sql/leogalle_test/vote_by_ip/';
+    protected $sqlPath = __DIR__ . '/../../..' . '/sql/test/vote_by_ip/';
 
     protected function setUp(): void
     {
         $configArray     = require(__DIR__ . '/../../../config/autoload/local.php');
-        $configArray     = $configArray['db']['adapters']['leogalle_test'];
+        $configArray     = $configArray['db']['adapters']['test'];
         $this->adapter   = new Adapter($configArray);
 
         $this->voteByIpTable      = new VoteTable\VoteByIp($this->adapter);
